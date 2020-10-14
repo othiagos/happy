@@ -21,11 +21,11 @@ Builds the app for production to the `build` folder.
 
 In the project directory, you can run:
 
-### `npm dev`
+### `npm run dev`
 
 Runs the app in the development mode.
 Open [http://localhost:3003](http://localhost:3003) to view it in the browser.
 
-### `npm typeorm 'command'`
+### `npx typeorm 'command'`
 
 Learn more about typeorm commands in the [documentation](https://github.com/typeorm/typeorm/blob/master/docs/using-cli.md)
