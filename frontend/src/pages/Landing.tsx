@@ -20,7 +20,7 @@ function Landing() {
           <samp>Santa Luzia</samp>
         </div>
         <Link to="/app" className="enter-app">
-          <FiArrowRight size={26} color="rgba(0, 0, 0, 0, 0.6)" />
+          <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
         </Link>
       </div>
     </div>
