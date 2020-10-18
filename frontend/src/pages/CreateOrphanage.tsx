@@ -80,18 +80,6 @@ export default function CreateOrphanage() {
       data.append('images', image)
     })
 
-    console.log({
-      name,
-      about,
-      contact_number,
-      latitude,
-      longitude,
-      instructions,
-      opening_hours,
-      open_on_weekends,
-      images
-    })
-
     await api.post('orphanages', data)
 
     alert('Cadastro realizado com sucesso!')
