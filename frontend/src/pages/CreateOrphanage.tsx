@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Map, Marker, TileLayer } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet'
 import { FiPlus, FiX } from "react-icons/fi";
+import InputMask from "react-input-mask";
 
 import '../styles/pages/create-orphanage.css';
 import SideBar from "../components/SideBar";
@@ -69,6 +70,7 @@ export default function CreateOrphanage() {
 
     data.append('name', name)
     data.append('about', about)
+    data.append('contact_number', String(contact_number))
     data.append('latitude', String(latitude))
     data.append('longitude', String(longitude))
     data.append('instructions', instructions)
@@ -76,6 +78,18 @@ export default function CreateOrphanage() {
     data.append('open_on_weekends', String(open_on_weekends))
     images.forEach(image => {
       data.append('images', image)
+    })
+
+    console.log({
+      name,
+      about,
+      contact_number,
+      latitude,
+      longitude,
+      instructions,
+      opening_hours,
+      open_on_weekends,
+      images
     })
 
     await api.post('orphanages', data)
@@ -127,6 +141,14 @@ export default function CreateOrphanage() {
                 onChange={event => setAbout(event.target.value)} />
             </div>
 
+            <div className="input-block">
+              <label htmlFor="name">Número de Whatsapp</label>
+              <InputMask
+                id="name"
+                mask="+55 (99) 99999-9999"
+                value={contact_number}
+                onChange={event => setContactNumber(event.target.value.replace(/\D+/g, ''))} />
+            </div>
 
             <div className="input-block">
               <label htmlFor="images">Fotos</label>

@@ -28,6 +28,7 @@ export default {
       latitude,
       longitude,
       about,
+      contact_number,
       instructions,
       opening_hours,
       open_on_weekends
@@ -46,6 +47,7 @@ export default {
       latitude,
       longitude,
       about,
+      contact_number,
       instructions,
       opening_hours,
       open_on_weekends: open_on_weekends === 'true',
@@ -57,6 +59,7 @@ export default {
       latitude: Yup.number().required(),
       longitude: Yup.number().required(),
       about: Yup.string().required().max(300),
+      contact_number: Yup.number().required(),
       instructions: Yup.string().required(),
       opening_hours: Yup.string().required(),
       open_on_weekends: Yup.boolean().required(),

@@ -19,6 +19,9 @@ export default class Orphanage {
   about: string
 
   @Column()
+  contact_number: number
+
+  @Column()
   instructions: string
 
   @Column()
